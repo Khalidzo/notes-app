@@ -1,7 +1,7 @@
-from flask import Flask
+from source import init_app
 
-app = Flask(__name__)
+app = init_app()
 
-@app.route('/home')
-def hello_world():
-    return '<script>alert("bad")</script>'
+# start app
+if __name__ == '__main__':
+    app.run()
